@@ -21,7 +21,7 @@ var eventListeners = require('events').EventEmitter.listenerCount
    (eventEmitter,'connection');
 console.log(eventListeners + " Listner(s) listening to connection event");
 
-// Fire the connection event 
+// Fire the connection event
 eventEmitter.emit('connection');
 
 // Remove the binding of listner1 function
