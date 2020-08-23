@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Node and DB</title>
+</head>
+<body>
+	<p>Node.js can be used in database applications.
+		One of the most popular databases is MySQL.
+	</p>
+<h1>Install MySQL Driver</h1>
+
+	<p>
+		
+Once you have MySQL up and running on your computer, you can access it by using Node.js.
+
+To access a MySQL database with Node.js, you need a MySQL driver. This tutorial will use the "mysql" module, downloaded from NPM.
+
+To download and install the "mysql" module, open the Command Terminal and execute the following:
+<br><h4>C:\Users\Your Name>npm install mysql</h4>
+	</p>
+	<br>
+
+	<p>Node.js can use this module to manipulate the MySQL database:
+
+<br>var mysql = require('mysql');</p>
+<br><br>
+<h1>Create Connection</h1>
+<p>
+	
+Start by creating a connection to the database.Use the username and password from your MySQL database.
+</p>
+<br>
+<pre>
+	<h4>demo_db_connection.js</h4>
+var mysql = require('mysql');
+var con = mysql.createConnection({
+  host: "localhost",
+  user: "yourusername",
+  password: "yourpassword"
+});
+
+con.connect(function(err) {
+  if (err) throw err;
+  console.log("Connected!");
+});
+</pre>
+
+<h4> C:\Users\Your Name>node demo_db_connection.js<br>Connected!</h4>
+
+</body>
+</html>
